@@ -1,25 +1,37 @@
 /*https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/array/564/
 Attain max profit from stocks
-{1,5,4,3,6}
+{1,5,4,3,6} -> 7
+{1,1,1} -> 0
+{7,3,1,0} -> 0
+{1,2,4,5} -> 4
 */
 public class Solution{
 	public int MaxProfit(int[] prices){
 		int overallProfit = 0;
-		int day = 0;
-		int intermediateProfit = 0 - prices[0];
-		for(int day=1; day<prices.Length;day++){
+		int buyDay = 0;
+        int day=1;
+		for( ;day<prices.Length;day++){
 			if(prices[day-1]>prices[day]){
-				if(intermediateProfit>0)
-	 				overallProfit += intermediateProfit;
- 				intermediateProfit = 0-prices[day];
-			}
-			else
-			{
-				intermediateProfit = intermediateProfit + prices[day];
+ 				overallProfit += prices[day-1]-prices[buyDay];
+ 				buyDay = day;
 			}
 		}
-		if(intermediateProfit>0)
-	 		overallProfit += intermediateProfit;
+	 	overallProfit += prices[day-1]-prices[buyDay];
+		return overallProfit;
+	}
+}
+
+public class Solution{
+	public int MaxProfit(int[] prices){
+		int overallProfit = 0;
+        	int day=1;
+		for( ;day<prices.Length;day++){
+			int profit = prices[day] - prices[day-1];
+			if(profit>0){
+				overallProfit += profit;
+			}
+			
+		}
 		return overallProfit;
 	}
 }
