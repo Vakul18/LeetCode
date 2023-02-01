@@ -8,6 +8,16 @@ https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/arra
 2 5 8
 3 6 9
 
+0,0 -> 0,2  
+0,1 -> 1,2
+0,2 -> 2,2
+
+1,0 -> 0,1
+2,0 -> 0,0
+2,1 -> 1,0
+2,2 -> 2,0
+
+
 1  2  3  4     9  5  1
 5  6  7  8 -> 10  6  2
 9 10 11 12    11  7  3
@@ -28,6 +38,11 @@ https://leetcode.com/explore/interview/card/top-interview-questions-easy/92/arra
 2 6 10 14 
 3 7 11 15
 4 8 12 16 
+
+[i][j] -> [j][n-1-i]
+[j][n-1-i] -> [n-1-i][n-1-j]
+[n-1-i][n-1-j] -> [n-1-j][i] 
+[n-1-j][i] -> [i][j]
 */
 public class Solution{
 	public void Rotate(int[][] matrix){
@@ -49,6 +64,25 @@ public class Solution{
 				matrix[i][n-j-1] = temp;
 			}
 		}
+		
+	}
+}
+
+
+public class Solution{
+	public void Rotate(int[][] matrix){
+
+		int n = matrix.Length;
+		for(int i = 0 ; i<n/2;i++){
+			for(int j = i ; j<n-1-i;j++){
+				int temp = matrix[i][j];
+				matrix[i][j] = matrix[n-1-j][i];
+				matrix[n-1-j][i] = matrix[n-1-i][n-1-j];
+				matrix[n-1-i][n-1-j] = matrix[j][n-1-i];
+				matrix[j][n-1-i] = temp;
+			}
+		}
+
 		
 	}
 }
