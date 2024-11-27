@@ -1,0 +1,80 @@
+1. Improve Technical communication skills
+2. Interviewer had to repeat to confirm understanding.
+3. Brush up algos so that problems can be solved by myself.
+4. Watch video.
+
+2 weeks max, 2nd or third week of Dec
+
+10 am - 3:30 pm , 4-5 days by Mon
+
+12, 13 Dec
+19, 20 Dec
+
+
+
+Round 1 : 
+Modular extensisble code, edge cases. Effective and clear comms.
+
+Test code through dry run.
+
+Input validations
+
+
+Round2: 
+Problem Solving ability, complex problem
+Don't handle individual scenarios. Write clean and simple program to handle all scenarios.
+Don't code till; you know the solution
+Dry run with examples
+
+Round3: 
+Infra Vol1(LLD)
+Design problem
+Comms
+practice on some whiteboard tool
+explain tradeoffs 
+be open to suggestions
+start with end to end high level diagram(top down approach)
+knowledge on data structures
+
+Round4:
+Infra 2(HLD)
+Resilient and scalable
+bottlenecks identification on a distributed system.
+1. Repeat the problem statement
+2. Ask clarifying ques
+3. Determine system size and who it users are.
+4. start with high level design.
+5. Explain your decisions.
+6. Evolve and scale your design.
+
+Round5:
+Host leader
+Motivation
+Leadership with examples(how delegated tasks, proactively identified and solve problems, provide motivation to teammates)
+Execution
+Examples of plan execute deliver
+craftsmanship
+high summary of project
+brief overview of project
+purpose 
+scope goals
+tell technologies used
+discuss challanges and solutions
+contributions to project
+Situation ques
+STAR Method
+ask questions about linkedin
+
+
+Prep:
+
+
+1. Problem solving with modular code.
+2. Low level system design.
+3. Data structures brush up
+4. Distributed system design ques
+Practice with whiteboard tools.
+5. Network protocols
+6. Come up with story of challenges faced ,their solution, leadership etc.
+
+
