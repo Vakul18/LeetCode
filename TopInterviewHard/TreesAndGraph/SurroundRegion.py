@@ -130,3 +130,47 @@ class Solution:
         self.dfs(row, col-1, board)
 
 
+
+class Solution:
+    def solve(self, board: List[List[str]]) -> None:
+        """
+        Do not return anything, modify board in-place instead.
+        """
+        if not board or not board[0]:
+            return
+        
+        m, n = len(board), len(board[0])
+
+        def dfs(i, j):
+            # Check boundaries and whether the cell is 'O'
+            if i < 0 or i >= m or j < 0 or j >= n or board[i][j] != 'O':
+                return
+            # Mark the cell as safe
+            board[i][j] = '#'
+            
+            # Explore all four directions
+            dfs(i + 1, j)  # down
+            dfs(i - 1, j)  # up
+            dfs(i, j + 1)  # right
+            dfs(i, j - 1)  # left
+
+        # Step 1: Mark all 'O's connected to the boundary as safe
+        for i in range(m):
+            if board[i][0] == 'O':  # Left boundary
+                dfs(i, 0)
+            if board[i][n - 1] == 'O':  # Right boundary
+                dfs(i, n - 1)
+        for j in range(n):
+            if board[0][j] == 'O':  # Top boundary
+                dfs(0, j)
+            if board[m - 1][j] == 'O':  # Bottom boundary
+                dfs(m - 1, j)
+        
+        # Step 2: Flip all remaining 'O's to 'X' and '#' back to 'O'
+        for i in range(m):
+            for j in range(n):
+                if board[i][j] == 'O':
+                    board[i][j] = 'X'  # Capture surrounded regions
+                elif board[i][j] == '#':
+                    board[i][j] = 'O'  # Restore safe regions
+

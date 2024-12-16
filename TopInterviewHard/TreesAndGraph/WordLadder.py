@@ -24,8 +24,6 @@ class Solution:
 		q = deque([(beginWord, 1)])
 		while q:
 			val, level = q.popleft()
-
-
 			for charIdx in range(0,len(val)):
 				for ch in string.ascii_lowercase:
 					newString = val[:charIdx] + ch + val[charIdx+1:]
