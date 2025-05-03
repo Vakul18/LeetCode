@@ -1,0 +1,21 @@
+1. long time for 1st solutions
+2. hard to follow, mumbling and blocked( no talk)
+3. problem solving, time management.
+- 2 ques per interview
+- 2 coding , ML system design,
+ 
+1 behav(conflicts handle, hardest problem, ) 7-10 different examples (STAR format) talk about I not we.
+ examples of scale, handle organization not 1-1 examples.
+ 1. resolving conflict : compromise not escalation, empathy, collaborate, examples
+ 2. embracing ambiguity : conflicting business needs, work without guidance, dervice clarity
+ 3. growing continuously : times you failed, improve on feedback
+ 4. deriving results : how drive results amidst roadblocks
+ 5. communication : pushback from stakeholders
+
+2. design a lang classifier, design solution to find weapons sale in facebook.
+(time management: 1. prob exploration : get to model specs, 2. Training data : how to get, validate, training samples, human reviews
+3. feature engg : come with features for model
+4. modeling : decide model, multi stage, single
+5. Monitoring : precision, recall, infernece)
+
+cold start, over fitting under  fitting, sparse model

@@ -71,10 +71,3 @@ class Solution:
                     mat[r][c] = min(mat[r][c], bot, right)
         
         return mat
-
-
-
-
-
-
-		
