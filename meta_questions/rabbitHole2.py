@@ -49,7 +49,7 @@ from collections import defaultdict
 
 # Write any import statements here
 
-def getMaxVisitableWebpages(N: int, M: int, A: List[int], B: List[int]) -> int:
+def getMaxVisitableWebpages1(N: int, M: int, A: List[int], B: List[int]) -> int:
   path = [0] * (N+1)
   low = [-1] * (N+1)
   disc = [-1] * (N+1) 
@@ -99,6 +99,79 @@ def getMaxVisitableWebpages(N: int, M: int, A: List[int], B: List[int]) -> int:
       findMaxPath(curr_page)
   
   return max(path)
+
+
+def getMaxVisitableWebpages(N: int, M: int, A: List[int], B: List[int]) -> int:
+  idx_counter = 0
+  disc = [-1] * (N+1)
+  low = [-1] * (N+1)
+  on_stack = [False] * (N+1)
+  stack = []
+  result = []
+  max_path = [0] * (N+1)
+  adj = defaultdict(list) 
+
+  for i in range(M):
+    adj[A[i]].append(B[i])
+        
+  for v in range(1, N+1):
+    if disc[v] != -1:
+      continue
+    
+    call_stack = [(v, 0, True)]
+    while call_stack:
+      recurse = False
+      u, nei_visited, first_visit = call_stack.pop()
+      if first_visit:
+        idx_counter += 1
+        disc[u] = low[u] = idx_counter
+        stack.append(u)
+        on_stack[u] = True
+      else:
+        prev_child = adj[u][nei_visited-1]
+        low[u] = min(low[u], low[prev_child])
+        if not on_stack[prev_child]:
+          max_path[u] = max(max_path[u], max_path[prev_child])
+    
+      while nei_visited < len(adj[u]):
+        nei = adj[u][nei_visited]
+        nei_visited += 1
+        
+        if disc[nei] == -1:
+          call_stack.append((u, nei_visited, False))
+          call_stack.append((nei, 0, True))
+          recurse = True
+          break
+        elif on_stack[nei]:
+          low[u] = min(low[u], low[nei])
+        else:
+          max_path[u] = max(max_path[u], max_path[nei])
+       
+      if recurse:
+        continue 
+       
+      if low[u] == disc[u]:
+        scc = []
+        scc_len = 0
+        max_scc_path = 0
+        while stack:
+          st_u = stack.pop()
+          scc.append(st_u)
+          scc_len += 1
+          on_stack[st_u] = False
+          max_scc_path = max(max_scc_path, max_path[st_u])
+          if st_u == u:
+            break
+        for scc_u in scc:
+          max_path[scc_u] = scc_len + max_scc_path 
+
+  return max(max_path)
+
+        
+          
+
+      
+
 
 
 # 🧪 Test Cases
