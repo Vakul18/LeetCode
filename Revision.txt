@@ -1,0 +1,115 @@
+Prefix sum:
+1. Sum of elements in a subarray for multiple queries
+   sum[i, j] = prefix_sum[j] - prefix_sum[i-1]
+2. https://leetcode.com/problems/contiguous-array/description/?source=submission-ac -- balanced binary subarray
+3. subarray sum equals K : https://leetcode.com/problems/subarray-sum-equals-k/description/
+
+Two pointers pattern:
+1. Two sum
+2. 3sum
+3. Container with most water : https://leetcode.com/problems/container-with-most-water/description/
+
+Sliding window pattern:
+overlapping problems related to subarrays with some conditions.
+1. Subarray of size k with max sum.
+2. Longest substring without repeating chars
+3. min window substring s includes t.
+
+Fast slow pointers:
+1. Linked list cycle.
+2. Happy number
+3. Find the duplicate number 
+
+LinkedList in-place reversal
+prev, current, use 2 pointers.
+1. Reverse a linkedlist
+2. reverse a linkedlist 2
+3. swap nodes in pairs
+
+Monotonic stack :
+1. next greater element
+for i in range(n):
+  while st and arr[i] > arr[st[-1]]:
+    result[st.pop()] = arr[i]
+  st.append(i)
+return result
+2. daily temp
+3. largest rect in histogram
+
+
+Top K elements:
+1. Kth largest element in arr
+2. Top k frequent elements
+3. Find k Pairs with smallest sums
+
+Overlapping intervals problems
+1. merging intervals
+2. intersection
+3. insert interval
+
+Modified binary search
+
+search in nearly sorted array
+search in rotated arrya
+serhcing in a lsit with unknown length
+searching in arrya with duplicates
+finding 1st or last occurrence of an element
+finding square root of number
+finding a peak element
+find min in rotated sorted arr
+search a 2d martrix
+
+
+
+Binary tree traversal
+pre, in, post, level traversal
+
+DFS
+find a path bw nodes
+check cycle
+scc
+topo sort
+
+BFS
+shortest path unweighted graph
+min transformation
+
+matrix traversal
+use graph algos
+
+backtracking
+1. gernate all perms, comb
+2. solve sudoku, n queen
+3. valid parenthesis
+
+DP
+optimization problems solved using overlapping subproblems. Common dp patterns
+1. fib
+2. 0/1 knapsack
+3. LCS
+4. LIS
+5. Subset sum
+6. matrix chain multiplication
+
+problems
+1. climb stairs
+2. coin change
+3. partition equal subset sum
+4. burst balloons
+
+Union find:
+"C:\Users\vkataria\Repo1\LeetCode\gfg-google-meta-ques\min_days_to_disconnect_island.py"
+
+Articulation pt : "C:\Users\vkataria\Repo1\LeetCode\gfg-google-meta-ques\articulationPt.py"
+
+bridges : "C:\Users\vkataria\Repo1\LeetCode\gfg-google-meta-ques\bridges-graph.py"
+
+
+
+
+
+
+  
+
+
+	 

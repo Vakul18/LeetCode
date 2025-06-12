@@ -11,6 +11,107 @@
  3. growing continuously : times you failed, improve on feedback
  4. deriving results : how drive results amidst roadblocks
  5. communication : pushback from stakeholders
+ 6. project scope change in between work.
+ 7. career aspiration
+ 8. how did resolve roadblocks
+ 9. Any outcome you delivered in numbers.
+
+✅ STAR Example – Resolving Conflict During Spam Mitigation (ML Engineer)
+S – Situation:
+During the spam mitigation project, we faced a significant challenge: due to privacy constraints, we didn’t have access to customer data. This made it difficult to evaluate false positives and improve the model. The product and QA teams were frustrated because they couldn’t validate model behavior, and we were getting pushback about “black box” decisions.
+
+T – Task:
+As the ML engineer leading the effort, I had to address these concerns and find a way to give visibility into model outputs—without breaching any data policies.
+
+A – Action:
+Rather than escalate the disagreement, I initiated a collaborative session with product and QA stakeholders to understand what kind of visibility they needed. I proposed a solution: integrating an LLM-based explanation layer that could interpret the model's spam detection logic in natural language. This gave product teams insight into why something was flagged, even without raw user data. I also worked closely with legal and privacy to ensure we stayed compliant.
+
+R – Result:
+The solution addressed all parties’ concerns—QA could now audit the logic, product had confidence in the model, and we avoided delays. Most importantly, it led to a precision improvement from 60% to over 90%. The collaboration also built trust and improved the relationship across ML and product teams for future projects.
+
+Hardest problem:
+  spam mitigation, can't look at data, hence added llm layers. Also for mitigation we created an async process, with callbacks.
+
+Communication: Pushback from Stakeholders
+Scenario: Convincing skeptical stakeholders to approve ML Ops
+
+S – Situation:
+Stakeholders were wary of investing in ML Ops due to uncertain ROI and potential long-term maintenance costs.
+
+T – Task:
+I had to communicate the value clearly and overcome their resistance to AI-related projects.
+
+A – Action:
+I created a clear roadmap with milestone-based value delivery, breaking down long-term costs and showing early wins. I tailored the message depending on the stakeholder—technical details for engineering, ROI for leadership.
+
+R – Result:
+The initiative was greenlit. We delivered Phase 1 ahead of time, gaining stakeholder trust and unlocking further budget.
+
+Learn from failures:
+
+Absolutely — here’s the same STAR response tailored specifically for an **ML Engineer** role. It emphasizes aspects relevant to model integration, pipeline components, and data contracts, which are especially important in ML projects:
+
+---
+
+### ✅ **STAR Answer (Tailored for ML Engineer) – Learning from Coordination Challenges**
+
+**S – Situation:**
+I was working as an ML Engineer on a team of three to build and deploy a new ML-powered feature. While we split responsibilities across model training, preprocessing, and integration, coordinating across these components proved difficult.
+
+**T – Task:**
+My responsibility was to develop and integrate the preprocessing pipeline. However, we encountered issues because the contracts—like feature formats, missing value handling, and input/output expectations—weren’t clearly defined between the components.
+
+**A – Action:**
+I realized we were losing time due to mismatched assumptions and unclear boundaries. I took the initiative to document detailed data contracts between the model, preprocessing, and downstream components. This included edge case handling, feature schema definitions, and I/O specs. I also proposed short coordination meetings to align on changes and verify integration expectations.
+
+**R – Result:**
+These changes reduced integration bugs and rework significantly. We were able to complete the feature rollout with fewer iterations and higher confidence in the handoffs. Since then, I’ve made detailed contract documentation and proactive cross-functional alignment a default practice in every ML project I work on.
+
+---
+
+
+Deriving Results Amidst Roadblocks
+Scenario: Limited data and model performance issues in spam detection
+
+S – Situation:
+We had limited ability to debug spam detection failures due to lack of real-world training data.
+
+T – Task:
+I needed to increase the model's precision and reduce user complaints, despite the absence of clear examples.
+
+A – Action:
+I leveraged an LLM-based explanation layer to simulate plausible user queries and interpret the model’s decisions. This allowed us to manually analyze and cluster failure types.
+
+R – Result:
+We reduced false positives significantly, improving precision by over 30%, and lowered internal support tickets by 50%.
+
+
+Embracing Ambiguity
+Scenario: Lack of access to customer data while working on spam mitigation
+
+S – Situation:
+While working on spam detection, we had no access to real user data due to privacy policies, which made it difficult to diagnose false positives and improve model performance.
+
+T – Task:
+I needed to find a way to gain insights into model decisions without violating user data constraints.
+
+A – Action:
+I introduced an LLM explanation layer to interpret why certain messages were flagged as spam. This let us evaluate model behavior indirectly and identify common false-positive patterns.
+
+R – Result:
+Model precision improved dramatically from 60% to over 90%, and we avoided any policy violations or delays in model improvement.
+
+
+
+
+
+
+- ML Ops : Design and implement first Ml Ops pipeline. Calculated estimates and convinced management to allow in house models, as the management were reluctant to sanction the project, vary of AI costs.
+- spam mitigation : We didn't have access to customer data, hence didn't have any reference where the model was failing. So, we added LLM layer which provided explanation for the spams which were detected. This allows to check scenarios of false positives. And hence I improved precision from 60% to 90%+.
+- Guiding implementation of spam mitigation, after principal left
+
+
+
 
 2. design a lang classifier, design solution to find weapons sale in facebook.
 (time management: 1. prob exploration : get to model specs, 2. Training data : how to get, validate, training samples, human reviews
