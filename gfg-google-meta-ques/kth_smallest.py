@@ -1,5 +1,8 @@
 """
 Given an array arr[] and an integer k where k is smaller than the size of the array, your task is to find the kth smallest element in the given array.
+
+[4, 1, 9, 0], 2 -> 1
+
 """
 import random
 class Solution:
