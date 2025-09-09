@@ -34,28 +34,32 @@ Output: true
 
 """
 class Solution:
-  def isValid(self, s: str) -> bool:
-    if len(s) == 0:
-      return True
-    open_brackets = set(['(', '{', '['])
-    close_brackets = {')' : '(', '}' : '{', ']' : '['}
-   
-    st = []
+  def generateParenthesis(self, n: int) -> List[str]:
+    answer = []
 
-    for char in s:
-      if char in open_brackets:
-        st.append(char)
-      elif char in close_brackets:
-        if not st:
-          return False
-        last_char = st.pop()
-        matching_char = close_brackets[char]
-        if last_char != matching_char:
-          return False
-      else:
-        return False
+    def generate(res : List[str], o, c):
+      if len(res) == 2*n:
+        answer.append("".join(res))
+        return
+  
+      if c < o:
+        res.append(')')
+        generate(res, o, c + 1)
+        res.pop()
+      if o < n:
+        res.append('(')
+        generate(res, o + 1, c)
+        res.pop()        
+              
+    
 
-    return True if not st else False
+    generate([], 0, 0)
+
+    return answer
+
+
+
+
         
     
 
